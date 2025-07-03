@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import TaskItem from './components/TaskItem';
+import AddButton from './components/AddButton';
 
 function App() {
   // Task data is hardcoded for now; will be loaded dynamically later
@@ -23,10 +24,17 @@ function App() {
     );
   };
 
+  const handleAdd = () => {
+    alert("Add button clicked!");
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>My To-Do List</h1>
+        <div className="add-button-margin">
+          <AddButton onClick={handleAdd}/>
+        </div>
         {/* Display list of tasks */}
         <div className="task-list">
           {tasks.map(task => (
