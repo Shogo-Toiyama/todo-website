@@ -47,7 +47,7 @@ function App() {
       <h1>My To-Do List</h1>
       <div className="task-input">
           <input type="text" value={inputText} onChange={(inptVar) => setInputText(inptVar.target.value)} onKeyDown={keyPress} placeholder="Add a new task"/>
-          <button onClick={addTask}>Add</button>
+          <button onClick={addTask}>+</button>
       </div>
       <div className="task-list-container">
         <div className="task-list">
@@ -63,7 +63,7 @@ function App() {
       </div>
       {tasks.length > 0 && (
         <div className="task-footer">
-          <div className="task-stats">{tasks.filter(task => !task.completed).length} tasks remaining</div>
+          <div className="task-stats">{tasks.filter(task => !task.completed).length} Tasks Remaining</div>
           <button className="delete-completed-btn" onClick={deleteCompleted}>Delete Completed</button>
         </div>
       )}
